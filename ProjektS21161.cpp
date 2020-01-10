@@ -32,15 +32,15 @@ int main()
 }
 
 
-void Powitanie()
+void Powitanie()				// ekran poczÄ…tkowy
 {
 	cout << "===============================================================================" << endl;
-    cout << "= Program do tworzenia figury, który umo¿liwia poruszanie obiektem po konsoli =" << endl;
-    cout << "==================  powiêkszania go i pomniejszania  ==========================" << endl;
-    cout << "===============================================================================" << endl;
-    cout << "============================  Udanej zabawy !  ================================" << endl;
-    cout << "===============================================================================" << endl;
-	cout << "=================  Wcisnij dowolny klawisz, aby rozpocz¹æ  ====================" << endl;
+    	cout << "= Program do tworzenia figury, ktÃ³ry umoÅ¼liwia poruszanie obiektem po konsoli =" << endl;
+    	cout << "==================  powiÄ™kszania go i pomniejszania  ==========================" << endl;
+    	cout << "===============================================================================" << endl;
+    	cout << "============================  Udanej zabawy !  ================================" << endl;
+    	cout << "===============================================================================" << endl;
+	cout << "=================  Wcisnij dowolny klawisz, aby rozpoczÅ¡Ä‡  ====================" << endl;
 	cout << "===============================================================================" << endl;
     _getch();
 }
@@ -60,14 +60,14 @@ void Wprowadzanie(float &size, char &znak)
 	while (rozmiar < min || rozmiar > max);
     size = rozmiar;
 
-    cout << "Podaj znak, którym narysujesz figurê: ";				// wybór znaku
+    cout << "Podaj znak, ktÃ³rym narysujesz figurÄ™: ";				// wybÃ³r znaku
     cin >> znak;
 
 }
 
 
 
-void Tworzenie_figury(float size, float x, float y, char znak)
+void Tworzenie_figury(float size, float x, float y, char znak)			// rysowanie figury
 {
     system("cls");
 
@@ -75,16 +75,16 @@ void Tworzenie_figury(float size, float x, float y, char znak)
 	{
 		gotoxy(x + i, y + size - i), cout << znak;
 		
-        gotoxy(x + i, y + i), cout << znak;																		
+        	gotoxy(x + i, y + i), cout << znak;																		
 
 		gotoxy(x + size / 2, y + size / 2), cout << znak; 
 	}
 	
     gotoxy(10, 25), 
 	cout << "Instrukcja:" << endl; 															// instrukcja w oknie poruszania figury
-	cout << "Górna strzalka - ruch w góre; Dolna strza³ka - ruch w dol" << endl;
-	cout << "Prawa strzalka - ruch w prawo; Lewa strza³ka - ruch w lewo" << endl;
-	cout << "Przycisk '-' pomniejszanie figury; Przycisk '+' powiêkszanie figury" << endl;
+	cout << "GÃ³rna strzalka - ruch w gÃ³re; Dolna strzaÅ‚ka - ruch w dol" << endl;
+	cout << "Prawa strzalka - ruch w prawo; Lewa strzaÅ‚ka - ruch w lewo" << endl;
+	cout << "Przycisk '-' pomniejszanie figury; Przycisk '+' powiÄ™kszanie figury" << endl;
 	cout << "ESC: wyjscie";
 }
 
@@ -103,7 +103,7 @@ void Ruch(float size, float &x, float &y, char znak)     // przesuwanie figury p
         switch (klawisz)
         {
         
-		case '+':   // powiêkszanie
+		case '+':   	// powiÄ™kszanie
         {
             size++;
 
@@ -112,7 +112,7 @@ void Ruch(float size, float &x, float &y, char znak)     // przesuwanie figury p
             break;
         }
 
-        case '-':  // pomniejszanie
+        case '-':  		// pomniejszanie
         {
             size--;
             if (size < 5 || size > max)
@@ -120,26 +120,26 @@ void Ruch(float size, float &x, float &y, char znak)     // przesuwanie figury p
             break;
         }
         
-        case 77:     // w prawo            
+        case 77:     		// w prawo            
         {
         	x++;
             break;
         }
 
-        case 75:    // w lewo       
+        case 75:    		// w lewo       
         {
             x--;
             break;
         }
 
       
-        case 80:  // w górê
+        case 80:  		// w gÃ³rÄ™
         {
             y++;
             break;
         }  
 		
-		case 72:  // w dó³
+		case 72:  	// w dÃ³Å‚
         {
             y--;
             break;
