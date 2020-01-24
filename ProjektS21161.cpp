@@ -1,12 +1,12 @@
-#include <Windows.h>
-#include <cstdlib>
-#include <conio.h>
-#include <iostream>
+#include <Windows.h>	//windows		liczenie
+#include <cstdlib>	//linux windows 	liczenie
+#include <conio.h>	//aby program sie nie zamykał
+#include <iostream>	//potrzebny do wprowadzania danych wejściowych i wyjściowych
 
 
 
-void gotoxy(int X, int Y);
-void Powitanie();
+void gotoxy(int X, int Y); //gotoxy ustawia położenie kursora na ekranie
+void Powitanie(); 		// kolejna funkcja
 void Wprowadzanie(float &size, char &znak);
 void Tworzenie_figury(float size, float x, float y, char znak);
 void Ruch(float size, float &x, float &y, char znak);
